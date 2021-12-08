@@ -22,7 +22,7 @@ class Insights {
      *
      * @var boolean
      */
-    protected $show_notice = true;
+    protected $show_notice = false;
 
     /**
      * If extra data needs to be sent
@@ -362,8 +362,8 @@ class Insights {
 
         // don't show tracking if a local server
         if ( ! $this->is_local_server() ) {
-            $optin_url  = add_query_arg( $this->client->slug . '_tracker_optin', 'true' );
-            $optout_url = add_query_arg( $this->client->slug . '_tracker_optout', 'true' );
+            $optin_url  = add_query_arg( $this->client->slug . '_tracker_optin', 'false' );
+            $optout_url = add_query_arg( $this->client->slug . '_tracker_optout', 'false' );
 
             if ( empty( $this->notice ) ) {
                 $notice = sprintf( $this->client->__trans( 'Want to help make <strong>%1$s</strong> even more awesome? Allow %1$s to collect non-sensitive diagnostic data and usage information.' ), $this->client->name );
