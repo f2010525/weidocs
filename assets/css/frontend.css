@@ -1,0 +1,669 @@
+@font-face {
+  font-family: 'weidocs';
+  src: url('../fonts/weidocs.ttf?7jluzu') format('truetype'), url('../fonts/weidocs.woff?7jluzu') format('woff'), url('../fonts/weidocs.svg?7jluzu#weidocs') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^='weidocs-icon-'],
+[class*=' weidocs-icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'weidocs' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.weidocs-icon-close:before {
+  content: '\f00d';
+}
+.weidocs-icon-remove:before {
+  content: '\f00d';
+}
+.weidocs-icon-times:before {
+  content: '\f00d';
+}
+.weidocs-icon-home:before {
+  content: '\f015';
+}
+.weidocs-icon-refresh:before {
+  content: '\f021';
+}
+.weidocs-icon-print:before {
+  content: '\f02f';
+}
+.weidocs-icon-folder-open:before {
+  content: '\f07c';
+}
+.weidocs-icon-envelope:before {
+  content: '\f0e0';
+}
+.weidocs-icon-file-text-o:before {
+  content: '\f0f6';
+}
+.weidocs-icon-angle-left:before {
+  content: '\f104';
+}
+.weidocs-icon-angle-right:before {
+  content: '\f105';
+}
+.weidocs-icon-angle-up:before {
+  content: '\f106';
+}
+.weidocs-icon-angle-down:before {
+  content: '\f107';
+}
+.weidocs-icon-smile-o:before {
+  content: '\f118';
+}
+.weidocs-icon-frown-o:before {
+  content: '\f119';
+}
+body.single.single-docs .content-area {
+  width: 100%;
+}
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+}
+.weidocs-overflow-hidden {
+  overflow: hidden;
+}
+.weidocs-single-wrap {
+  width: 100%;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+.weidocs-single-wrap:before,
+.weidocs-single-wrap:after {
+  content: " ";
+  display: table;
+}
+.weidocs-single-wrap:after {
+  clear: both;
+}
+.weidocs-single-wrap .weidocs-sidebar {
+  width: 25%;
+}
+.weidocs-single-wrap .weidocs-sidebar h3.widget-title {
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  margin: 0 0 15px 0;
+  padding: 0 0 15px 0;
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list {
+  list-style: none;
+  margin: 0 12px 0 0;
+  padding: 0;
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li > a:before {
+  content: '\f07c';
+  margin-right: 10px;
+  font-family: 'weidocs';
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list li.wd-state-open > a > .weidocs-caret,
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list li.wd-state-closed > a > .weidocs-caret {
+  float: right;
+  line-height: inherit;
+  padding: 0 10px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #999;
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list li.wd-state-open > a > .weidocs-caret:hover,
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list li.wd-state-closed > a > .weidocs-caret:hover {
+  border: 1px solid #eee;
+  color: #ccc;
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list li.wd-state-open > a > .weidocs-caret::before,
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list li.wd-state-closed > a > .weidocs-caret::before {
+  font-family: 'weidocs' !important;
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list li.wd-state-open > a > .weidocs-caret::before {
+  content: '\f106';
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list li.wd-state-closed > a > .weidocs-caret::before {
+  content: '\f107';
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list li.wd-state-closed ul.children {
+  display: none;
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list li a {
+  display: block;
+  padding: 8px 10px 8px 20px;
+  text-decoration: none;
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list li ul.children {
+  list-style: none;
+  margin: 15px 0 15px 26px;
+  padding: 0;
+  border: none;
+  border-left: 1px solid #ddd;
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list li ul.children a {
+  color: #333333;
+  font-weight: normal;
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li.current_page_parent > a,
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li.current_page_item > a,
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li.current_page_ancestor > a {
+  background: #3598DB;
+  color: #fff;
+  border-radius: 5px;
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li.current_page_parent > a .weidocs-caret,
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li.current_page_item > a .weidocs-caret,
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li.current_page_ancestor > a .weidocs-caret {
+  color: #fff;
+  display: none;
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li.current_page_parent li.current_page_item > a,
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li.current_page_item li.current_page_item > a,
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li.current_page_ancestor li.current_page_item > a {
+  border-left: 2px solid #3598DB;
+  color: #191919;
+  font-weight: bold;
+}
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li.current_page_parent ul.children,
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li.current_page_item ul.children,
+.weidocs-single-wrap .weidocs-sidebar ul.doc-nav-list > li.current_page_ancestor ul.children {
+  display: block;
+}
+.weidocs-single-wrap .weidocs-single-content {
+  width: 75%;
+  border-left: 1px solid #eee;
+  padding-left: 25px;
+}
+.weidocs-single-wrap .weidocs-single-content ol.weidocs-breadcrumb {
+  margin-bottom: 30px;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.weidocs-single-wrap .weidocs-single-content ol.weidocs-breadcrumb li {
+  display: inline;
+}
+.weidocs-single-wrap .weidocs-single-content ol.weidocs-breadcrumb li.delimiter {
+  color: #999;
+  margin: 0 2px;
+}
+.weidocs-single-wrap .weidocs-single-content ol.weidocs-breadcrumb a {
+  text-decoration: none;
+}
+.weidocs-single-wrap .weidocs-single-content article {
+  position: relative;
+}
+.weidocs-single-wrap .weidocs-single-content article a.weidocs-print-article {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #777;
+}
+.weidocs-single-wrap .weidocs-single-content article a.weidocs-print-article:hover {
+  color: #555;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content {
+  width: 100% !important;
+  float: none !important;
+  display: block;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content a.anchorjs-link {
+  text-decoration: none;
+  box-shadow: none !important;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content img {
+  max-width: 100%;
+  border: 1px solid #eee;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 25px;
+  height: auto;
+  background: #F9F9F9;
+  display: block;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content pre {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 9px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content dl {
+  margin-bottom: 1em;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content dl dt {
+  float: left;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  padding: 4px 9px;
+  margin-bottom: 1em;
+  font-size: 18px;
+  line-height: 1.2em;
+  border-radius: 50px;
+  color: #fff;
+  background: #3197d1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  font-size: 15px;
+  min-width: 9px;
+  position: relative;
+  top: 2px;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content dl dd {
+  padding-top: 3px;
+  margin: 0 0 5px 45px;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content dl dd:before,
+.weidocs-single-wrap .weidocs-single-content article .entry-content dl dd:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content dl dd:after {
+  clear: both;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content .weidocs-callout {
+  border-left: 5px solid;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 2em;
+  padding: 16px 25px 16px 20px;
+  background: #f1f1f1;
+  border-color: #cfcfcf;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content .weidocs-callout.callout-yellow {
+  background: #fffcd5;
+  border-color: #e7dca4;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content .weidocs-callout.callout-blue {
+  background: #e8f4ff;
+  border-color: #bed1e6;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content .weidocs-callout.callout-green {
+  background: #e5fadc;
+  border-color: #bbdaaf;
+}
+.weidocs-single-wrap .weidocs-single-content article .entry-content .weidocs-callout.callout-red {
+  background: #fde8e8;
+  border-color: #e7aaaa;
+}
+.weidocs-single-wrap .weidocs-single-content article footer.entry-footer.weidocs-entry-footer {
+  margin-top: 60px;
+  float: none;
+  width: 100%;
+  display: block;
+}
+.weidocs-single-wrap .weidocs-single-content article footer.entry-footer.weidocs-entry-footer:before,
+.weidocs-single-wrap .weidocs-single-content article footer.entry-footer.weidocs-entry-footer:after {
+  content: " ";
+  display: table;
+}
+.weidocs-single-wrap .weidocs-single-content article footer.entry-footer.weidocs-entry-footer:after {
+  clear: both;
+}
+.weidocs-single-wrap .weidocs-single-content article footer.entry-footer.weidocs-entry-footer .weidocs-article-author {
+  display: none;
+}
+.weidocs-single-wrap .weidocs-single-content article footer.entry-footer.weidocs-entry-footer .weidocs-help-link a {
+  border-bottom: 1px dotted #C5C5C5;
+  text-decoration: none;
+}
+.weidocs-single-wrap .weidocs-single-content article footer.entry-footer.weidocs-entry-footer .weidocs-help-link a:hover {
+  text-decoration: none;
+  border-bottom: 1px dotted #999;
+}
+.weidocs-single-wrap .weidocs-single-content article footer.entry-footer.weidocs-entry-footer time {
+  float: right;
+  font-weight: normal;
+  font-style: italic;
+}
+.weidocs-single-wrap .weidocs-single-content .weidocs-comments-wrap {
+  position: relative;
+}
+.weidocs-doc-nav {
+  width: 100%;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 20px 0 30px 0;
+  padding: 25px 0;
+}
+.weidocs-doc-nav:before,
+.weidocs-doc-nav:after {
+  content: " ";
+  display: table;
+}
+.weidocs-doc-nav:after {
+  clear: both;
+}
+.weidocs-doc-nav .nav-previous {
+  float: left;
+  width: 50%;
+}
+.weidocs-doc-nav .nav-next {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+.weidocs-shortcode-wrap:before,
+.weidocs-shortcode-wrap:after {
+  content: " ";
+  display: table;
+}
+.weidocs-shortcode-wrap:after {
+  clear: both;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list:before,
+.weidocs-shortcode-wrap ul.weidocs-docs-list:after {
+  content: " ";
+  display: table;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list:after {
+  clear: both;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list li.weidocs-docs-single {
+  margin: 0;
+  margin-bottom: 20px;
+  position: relative;
+  border: 1px solid #e5e5e5;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list li.weidocs-docs-single h3 {
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 12px;
+  margin: 0;
+  line-height: 1.4;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list li.weidocs-docs-single h3 a {
+  text-decoration: none;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list li.weidocs-docs-single .inside {
+  padding: 15px;
+  min-height: 60px;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list li.weidocs-docs-single .weidocs-doc-link {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  background-color: #f7f7f7;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list ul.weidocs-doc-sections {
+  margin-left: 20px;
+  padding: 0;
+  list-style-type: disc;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list ul.weidocs-doc-sections li {
+  margin: 0;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list.col-2 > li {
+  float: left;
+  width: 48%;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list.col-2 > li:nth-child(2n + 1) {
+  clear: both;
+  margin-right: 3%;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list.col-3 > li {
+  float: left;
+  width: 31%;
+  margin-right: 3%;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list.col-3 > li:nth-child(3n + 1) {
+  clear: both;
+}
+.weidocs-shortcode-wrap ul.weidocs-docs-list.col-3 > li:nth-child(3n + 3) {
+  margin-right: 0;
+}
+.weidocs-feedback-wrap {
+  padding-top: 15px;
+  text-align: center;
+  margin: 25px 0;
+}
+.weidocs-feedback-wrap:before,
+.weidocs-feedback-wrap:after {
+  content: " ";
+  display: table;
+}
+.weidocs-feedback-wrap:after {
+  clear: both;
+}
+.weidocs-feedback-wrap .vote-link-wrap {
+  margin-left: 10px;
+}
+.weidocs-feedback-wrap a {
+  font-weight: normal;
+  padding: 2px 15px 2px 15px;
+  color: #fff;
+  text-decoration: none;
+  line-height: 150%;
+  border-radius: 3px;
+}
+.weidocs-feedback-wrap a .count {
+  background-color: #fff;
+  border-radius: 50%;
+  color: #999;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+  font-weight: normal;
+  text-align: center;
+  display: inline-block;
+  margin-left: 5px;
+  line-height: 150%;
+}
+.weidocs-feedback-wrap a:hover {
+  text-decoration: none;
+}
+.weidocs-feedback-wrap a.positive {
+  background: #27ae60;
+  border: 1px solid #26aa5e;
+  margin-right: 10px;
+}
+.weidocs-feedback-wrap a.positive:hover {
+  background-color: #229955;
+  color: #fff;
+}
+.weidocs-feedback-wrap a.negative {
+  background: #e74c3c;
+  border: 1px solid #e64837;
+}
+.weidocs-feedback-wrap a.negative:hover {
+  background-color: #e43725;
+  color: #fff;
+}
+.weidocs-alert {
+  padding: 15px;
+  border: 1px solid transparent;
+}
+.weidocs-alert.weidocs-alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+.weidocs-alert.weidocs-alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.weidocs-modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9985;
+  background-color: #000;
+  opacity: 0.5;
+  display: none;
+}
+.weidocs-contact-modal {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 9990;
+  width: 560px;
+  margin-left: -280px;
+  background-color: #fff;
+  border-radius: 3px;
+  outline: 0;
+  display: none;
+}
+.weidocs-contact-modal .weidocs-modal-close {
+  position: absolute;
+  display: block;
+  z-index: 9997;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  background: #eee;
+  padding: 5px 15px 5px 15px;
+  color: #666;
+  font-size: 15px;
+}
+.weidocs-contact-modal .weidocs-modal-close:hover {
+  color: #333;
+  background: #ccc;
+}
+.weidocs-contact-modal .weidocs-modal-header,
+.weidocs-contact-modal .weidocs-modal-body {
+  padding: 0 50px;
+}
+.weidocs-contact-modal .weidocs-modal-header {
+  padding: 20px 0;
+  text-align: center;
+}
+.weidocs-contact-modal .weidocs-modal-body {
+  padding-bottom: 40px;
+}
+.weidocs-contact-modal .weidocs-modal-body #weidocs-modal-errors .weidocs-alert {
+  margin-bottom: 20px;
+}
+.weidocs-contact-modal .weidocs-modal-body .weidocs-form-row {
+  margin-bottom: 10px;
+}
+.weidocs-contact-modal .weidocs-modal-body .weidocs-form-row label {
+  padding-bottom: 5px;
+  display: block;
+}
+.weidocs-contact-modal .weidocs-modal-body .weidocs-form-action {
+  margin-top: 10px;
+}
+.weidocs-contact-modal input[type='text'],
+.weidocs-contact-modal input[type='email'],
+.weidocs-contact-modal textarea {
+  background: #f7f7f7;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  border: 1px solid #d1d1d1;
+  border-radius: 2px;
+  color: #686868;
+  padding: 0.625em 0.4375em;
+  width: 100%;
+}
+.weidocs-contact-modal input[type='text']:focus,
+.weidocs-contact-modal input[type='email']:focus,
+.weidocs-contact-modal textarea:focus {
+  background-color: #fff;
+  border-color: #007acc;
+  color: #1a1a1a;
+  outline: 0;
+}
+.weidocs-contact-modal input[disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+.weidocs-icon-spin {
+  -webkit-animation: weidocs-spin 2s infinite linear;
+  animation: weidocs-spin 2s infinite linear;
+}
+@-webkit-keyframes weidocs-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes weidocs-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@media screen and (max-width: 768px) {
+  .weidocs-single-wrap {
+    display: block;
+  }
+  .weidocs-single-wrap .weidocs-sidebar,
+  .weidocs-single-wrap .weidocs-single-content {
+    width: 100%;
+  }
+  .weidocs-single-wrap .weidocs-single-content {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .weidocs-shortcode-wrap ul.weidocs-docs-list.col-3 > li,
+  .weidocs-shortcode-wrap ul.weidocs-docs-list.col-2 > li {
+    width: 48%;
+  }
+  .weidocs-shortcode-wrap ul.weidocs-docs-list.col-3 > li:nth-child(3n+1) {
+    clear: none;
+  }
+  .weidocs-shortcode-wrap ul.weidocs-docs-list.col-3 > li:nth-child(2n+1) {
+    clear: both;
+    margin-right: 2%;
+  }
+  .weidocs-shortcode-wrap ul.weidocs-docs-list.col-3 > li:nth-child(2n+2) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .weidocs-hide-mobile {
+    display: none;
+  }
+  .weidocs-single-wrap .weidocs-single-content footer.entry-footer.weidocs-entry-footer time {
+    float: none;
+  }
+  .weidocs-shortcode-wrap ul.weidocs-docs-list.col-3 > li,
+  .weidocs-shortcode-wrap ul.weidocs-docs-list.col-2 > li {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
+  .weidocs-feedback-wrap .vote-link-wrap {
+    display: block;
+    margin-top: 15px;
+  }
+}
